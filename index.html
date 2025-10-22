@@ -4,7 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Project Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New';
+            background-color: #0a0a0a;
+            color:#bf00ff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #0a0a0a, #55076f);
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            border: 1px solid #bf00ff;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #00ff00;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #00cc00;
+            opacity: 0.8;
+        }
+
+        .team-leader-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .team-leader-title {
+            font-size: 1.5rem;
+            color:#bf00ff;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+        }
+
+        .team-leader-card {
+            background: #0a0a0a;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid #bf00ff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+        }
+
+        .team-leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .member-card {
+            background: #0a0a0a;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #bf00ff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            border-color: #00ff00;
+        }
+
+        .member-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #003300, #00ff00);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #0a0a0a;
+            border: 2px solid #00ff00;
+        }
+
+        .leader-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #00ff00, #00cc00);
+            font-size: 2rem;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #00ff00;
+        }
+
+        .member-role {
+            color: #00cc00;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .leader-role {
+            color: #00ff00;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+        }
+
+        .profile-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: #003300;
+            color: #00ff00;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 1px solid #00ff00;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .profile-link:hover {
+            background: #bf00ff;
+            border: 1px solid #bf00ff ;
+            color: #0a0a0a;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            color: #00cc00;
+            border-top: 1px solid #003300;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #00ff00 }
+        }
+
+        /* Effets de glow */
+        .glow {
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-leader-card {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
