@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style_portfolio.css" type="text/css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Courier New', monospace;
+        background: #1a1a1a;
+        color: #00ff00;
+        padding: 40px 20px;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        border: 2px solid #00ff00;
+        padding: 30px;
+        background: #0d0d0d;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    }
+
+
+
+    h1 {
+        color: #00ff00;
+        font-size: 2em;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        border-bottom: 2px dashed #00ff00;
+        padding-bottom: 10px;
+    }
+
+    h1::before {
+        content: "> ";
+        color: #00ff00;
+    }
+
+    .title {
+        color: #33ff33;
+        margin-bottom: 30px;
+        font-style: italic;
+    }
+
+    .title::before {
+        content: "// ";
+    }
+
+    .bio {
+        margin-bottom: 40px;
+        padding-left: 20px;
+        border-left: 3px solid #00ff00;
+        color: #cccccc;
+    }
+
+    h2 {
+        color: #00ff00;
+        font-size: 1.5em;
+        margin: 30px 0 15px 0;
+        text-transform: uppercase;
+    }
+
+    h2::before {
+        content: "$ ";
+    }
+
+    .skills {
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    .skills li {
+        margin-bottom: 8px;
+        color: #cccccc;
+    }
+
+    .skills li::before {
+        content: "[x] ";
+        color: #00ff00;
+        font-weight: bold;
+    }
+
+    .github-section {
+        margin-top: 40px;
+        padding: 20px;
+        border: 1px dashed #00ff00;
+        background: #0a0a0a;
+    }
+
+    .github-link {
+        color: #00ff00;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid #00ff00;
+        transition: all 0.3s ease;
+    }
+
+    .github-link:hover {
+        background: #00ff00;
+        color: #000;
+    }
+
+    .github-link::before {
+        content: ">>> ";
+    }
+
+    .cursor {
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0%, 49% {
+            opacity: 1;
+        }
+        50%, 100% {
+            opacity: 0;
+        }
+    }
+
+    .footer {
+        margin-top: 30px;
+        text-align: center;
+        color: #666;
+        font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 20px 10px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+
+    }
+</style>
+<body>
+<div class="container">
+
+
+    <h1>Abdellah Esmail Azizi<span class="cursor">_</span></h1>
+    <p class="title"> Machine Learning Engineer</p>
+
+    <div class="bio">
+        Aspiring Machine Learning Engineer with a strong foundation in Python, data analysis, and ML frameworks.
+        Passionate about leveraging AI to solve real-world problems and eager to contribute to innovative ML projects.
+        Currently expanding my expertise in model deployment and MLOps practices
+    </div>
+
+    <h2>Technical Skills</h2>
+    <ul class="skills">
+        <li>Python</li>
+        <li>Pandas & NumPy</li>
+        <li>Matplotlib</li>
+        <li>Scikit-learn</li>
+        <li>PyTorch</li>
+        <li>SQL</li>
+        <li>Git</li>
+        <li>Linux</li>
+        <li>MLops</li>
+
+    </ul>
+    <h2>Non-Technical Skills</h2>
+    <ul class="skills">
+        <li>analytical and critical thinking </li>
+        <li>problem solving</li>
+        <li>communication and team work</li>
+
+    </ul>
+
+    <div class="github-section">
+        <h2>Connect With Me</h2>
+        <a href="https://github.com/aziziabdallahesmail-ensia" class="github-link" target="_blank">
+            GitHub Profile
+        </a>
+    </div>
+
+    <div class="footer">
+        [System ready] | [Status: Online]
+    </div>
+</div>
+</body>
+</html>
