@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team member Portfolio</title>
+<style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New';
+            background-color: #0a0a0a;
+            color:#bf00ff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #0a0a0a, #55076f);
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            border: 1px solid #bf00ff;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #00ff00;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #00cc00;
+            opacity: 0.8;
+        }
+
+        .team-leader-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .team-leader-title {
+            font-size: 1.5rem;
+            color:#bf00ff;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+        }
+
+        .team-leader-card {
+            background: #0a0a0a;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid #bf00ff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .team-leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
+            text-align: center;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            border: 1px solid #bf00ff;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+            
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .member-card {
+            background: #0a0a0a;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #bf00ff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            border-color: #00ff00;
+        }
+
+        .member-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #003300, #00ff00);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #0a0a0a;
+            border: 2px solid #00ff00;
+        }
+
+        .leader-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #00ff00, #00cc00);
+            font-size: 2rem;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #00ff00;
+        }
+
+        .member-role {
+            color: #00cc00;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .leader-role {
+            color: #00ff00;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+        }
+
+        .profile-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: #003300;
+            color: #00ff00;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 1px solid #00ff00;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .profile-link:hover {
+            background: #00ff00;
+            color: #0a0a0a;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #00ff00 }
+        }
+
+        /* Effets de glow */
+        .glow {
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-leader-card {
+                max-width: 100%;
+            }
+        }
+</style>
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Soufi Louai Nasrellah</h1>
+            <p class="subtitle">Third Year Student</p>
+        </header>
+        <!--small biographie--->
+        <div class="team-leader-section">
+            <h2 class="team-leader-title">> Soufi Louai Nasrellah</h2>
+            <div class="team-leader-card">
+                <div class="member-avatar leader-avatar">LS</div>
+                <h2 class="member-name glow">I'm a third year student at the National Higher School of Artificial Intelligence (ENSIA), with a strong passion for AI and full-stack development. <br>
+
+                                            skills : Web development, Mobile development, data mining and machine learning <br>
+
+                                            Always seeking technical challenges to create innovative and efficient solutions. </h2>
+        
+                <a href="https://github.com/LouaiSf"class="profile-link" >github_profile </a>
+
+            </div>
+        </div>
+
+        <!-- Preferences -->
+        <h2 class="team-leader-title" style="margin-top: 4rem;">> TECHNICAL_COMPETENCIES</h2>
+        <div class="team-grid">
+            <div class="member-card">
+                <div class="member-avatar">C++</div>
+                <h2 class="member-name">Programming language</h2>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">PYTHON</div>
+                <h2 class="member-name">Programming language</h2>
+            </div>
+             <div class="member-card">
+                <div class="member-avatar">JAVA</div>
+                <h2 class="member-name">Programming language</h2>
+                
+            </div>
+             <div class="member-card">
+                <div class="member-avatar">JS</div>
+                <h2 class="member-name">Programming language</h2>
+                
+            </div>
+             <div class="member-card">
+                <div class="member-avatar">PHP</div>
+                <h2 class="member-name">Programming language</h2>
+                
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">DART</div>
+                <h2 class="member-name">Programming language</h2>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">WD</div>
+                <h2 class="member-name">full-stack</h2>
+                <p class="member-role">html,css,ajax,Js,React,NodeJs</p>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">DB</div>
+                <h2 class="member-name">DataBase</h2>
+                <p class="member-role">Oracle SQL, MySQL, MongoDB</p>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">Dart</div>
+                <h2 class="member-name">Programming language</h2>
+                
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">Fl</div>
+                <h2 class="member-name">Framework</h2>
+                <p class="member-role">Flutter</p>
+                
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
