@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nacer Eddine Missouni | Profile</title>
+
+  <style>
+    /* ====== RESET & BASE ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #111827, #1e293b);
+      color: #f3f4f6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    /* ====== CARD ====== */
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      max-width: 700px;
+      width: 100%;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* ====== HEADINGS ====== */
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+
+    /* ====== SECTIONS ====== */
+    section {
+      margin: 25px 0;
+      text-align: left;
+    }
+
+    section h3 {
+      font-size: 1.1rem;
+      color: #38bdf8;
+      margin-bottom: 8px;
+      border-left: 3px solid #38bdf8;
+      padding-left: 8px;
+    }
+
+    p, li {
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: square inside;
+      margin-left: 5px;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #7dd3fc;
+    }
+
+    /* ====== FOOTER ====== */
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 600px) {
+      .card {
+        padding: 25px;
+      }
+      h1 {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <header>
+      <h1>Nacer Eddine Missouni</h1>
+      <h2>AI Student • Writer • Future Innovator</h2>
+    </header>
+
+    <section>
+      <h3>About Me</h3>
+      <p>
+        I'm an AI student driven by curiosity, creativity, and the desire to build things that actually matter.
+        Between code and words, I’m learning how intelligence — human or artificial — shapes our world.
+        My goal: merge tech and storytelling to make complex ideas beautifully simple.
+      </p>
+    </section>
+
+    <section>
+      <h3>Technical Skills</h3>
+      <ul>
+        <li>Python (Data Analysis, Machine Learning, Automation)</li>
+        <li>HTML • CSS • JavaScript (Frontend Fundamentals)</li>
+        <li>Git • GitHub • VS Code</li>
+        <li>Prompt Engineering • Copywriting • Creative Writing</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Find Me</h3>
+      <p>GitHub: <a href="https://github.com/nacermissouni" target="_blank">github.com/nacermissouni</a></p>
+    </section>
+
+    <div class="footer">
+      <p>© 2025 Nacer Eddine Missouni</p>
+    </div>
+  </div>
+</body>
+</html>
